@@ -49,6 +49,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
+
 StackOverflow for javascript syntax stuff I didn't know, the book Clean Code, some online references for HTML & CSS styling choices and the sound map for the frequencies of sounds for chords
 https://stackoverflow.com/questions/2044760/default-array-values
 https://marcgg.com/blog/2016/11/01/javascript-audio/
