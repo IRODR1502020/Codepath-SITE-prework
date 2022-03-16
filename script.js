@@ -310,16 +310,26 @@ function changeDiffCheck() {
 
 // Sound Synthesis Functions aka SIMONS SOUNDS
 // All the following code is used to generate sounds when buttons clicked
+// We had to create another oscillator to get polyphony
+// Then include more values in freqMap, and only call 'related' notes, ie., C3 & C4
 const freqMap = {
-  1: 261.6,
-  2: 329.6,
-  3: 392,
-  4: 466.2
+  1: 261.6,  // C4
+  2: 329.6,  // E4
+  3: 392,    // G4
+  4: 466.2,  // Bf4
+  5: 162.5,  // C3
+  6: 164.8,  // E3
+  7: 196,    // G3
+  8: 233.1   // Bf3
 }
 
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
   g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
+  
+  m.frequency.value = freqMap[btn + 4];
+  n.gain.setTargetAtTime(volume * 0.5,context.currentTime + 0.05,0.025)
+
   context.resume()
   tonePlaying = true
   setTimeout(function(){
@@ -332,6 +342,10 @@ function startTone(btn){
     context.resume()
     o.frequency.value = freqMap[btn]
     g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
+    
+    m.frequency.value = freqMap[btn + 4];
+    n.gain.setTargetAtTime(volume * 0.5,context.currentTime + 0.05,0.025)
+    
     context.resume()
     tonePlaying = true
   }
