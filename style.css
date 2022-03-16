@@ -18,7 +18,7 @@ html {
 body {
   background-color: #FFDEAD;
   color: DarkSlateGrey;
-  margin: 1rem;
+  margin: 2rem;
   font-family: verdana, rockwell, sans-serif;
   line-height: 1.5;
 }
@@ -31,6 +31,10 @@ button {
   padding: 36px;
   border-radius: 24px;
   cursor: pointer;
+}
+
+.wrapTarget {
+  word-wrap: break-word;
 }
 
 #gameButtonArea > button {
