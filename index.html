@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Everyones Favorite Memory Game</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    
+    <!-- this is the start of content -->
+    <h1>
+      ~!WARNING: SIMON has become unstable!~
+    </h1>
+    
+    <!--I thought this was pretty funny-->
+    <p>
+      If you're reading this, there's not much time left!
+    </p>
+    
+    <p>
+      SIMON has gone haywire after Ian was caught eating Doritos over the debugger! 
+    </p>
+    
+    <p>
+      It's pumping out an 
+      advanced color-encrypted matrix only you can solve by pushing its brightly illuminated buttons
+      in a special pattern, decrypting the digital keys for the 'Emergency-Shutoff-Color-Generator-Valve'!
+      Its mayhem out there until we can contain the Rainbow Overdrive Protocol.
+    </p>
+  
+    <p>
+      Quickly! The fate of humanity depends on it!
+    </p>
+    
+    <p>
+      Choose your difficulty first!
+    </p>
+    
+    <div id="difficultyButtonArea">
+    <!--This is my EASY difficulty mode button-->
+      <button id="easy" onclick="setEasy()">
+        Easy
+      </button>
+    
+    <!--This is my MEDIUM difficulty mode button-->
+      <button id="medium" onclick="setMedium()">
+        Medium
+      </button>
+    
+    <!--This is my DIFFICULT difficulty mode button-->
+      <button id="difficult" onclick="setDifficult()">
+        Difficult
+      </button>
+    </div>
+    
+    <p>
+    </p>
+    
+    <!-- This is a start button -->
+    <button id="startBtn" onclick="startGame()">
+      START the decryption algorithm!
+    </button>
+    
+    <!-- This is an end button -->
+    <button id="endBtn" class="hidden" onclick="stopGame()">
+      Give up!
+    </button>
+    
+    <!--This is my lives counter button-->
+    <button id="output" class="hidden">
+    </button>
+    
+    <!-- This is my game button area, the container we stuck the game buttons in-->
+    <div id="gameButtonArea">
+      <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()">
+       Green
+      </button>
+      <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()">
+       Blue
+      </button>
+      <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()">
+       Red
+      </button>
+      <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()">
+       Yellow
+      </button>
+    </div>
+    
+    
+  </body>
+</html>
