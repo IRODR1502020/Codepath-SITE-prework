@@ -51,26 +51,57 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 
 StackOverflow for javascript syntax stuff I didn't know, the book Clean Code, some online references for HTML & CSS styling choices and the sound map for the frequencies of sounds for chords
+
 https://stackoverflow.com/questions/2044760/default-array-values
+
 https://marcgg.com/blog/2016/11/01/javascript-audio/
+
 https://www.w3schools.com/css//css_font_websafe.asp
+
 https://www.w3schools.com/cssref/css_colors.asp
+
 https://www.w3schools.com/howto/howto_css_pill_button.asp
+
 https://stackoverflow.com/questions/30035932/how-do-i-use-this-javascript-variable-in-html/30035967
 
 2. What was a challenge you encountered in creating this submission (be specific)? 
 	How did you overcome it? (recommended 200 - 400 words) 
+	
+I had a lot of fun programming each new quirk into my memory game for my first real web project ever, though I have a background with C and Java for small tasks and school work. 
 
+The first idea that came to my mind during my brainstorm, before even touching the code, was implementing a difficulty mode tied to pattern length. The problem, I soon realized, was array sizing. I realized that if I replayed a game and switched difficulty modes in between games, the second game used the same size array as the other mode. A bug, basically. In the beginning, I only had one array, pattern[], and I wanted it to be a certain size, but not explicitly at a length programmed by me. I couldn’t “switch” between arrays of different sizes until I realized I needed another array. Two actually, since I wanted to implement easy, medium and hard modes, making three arrays total. 
 
+Since I only needed to populate one of the three given arrays once per game, I put some code in the startGame function to populate only one of arrays, which was set by the user when they select a difficulty mode button. I used an if statement in startGame() to ensure the right array size was populated. Then, I used a for loop to iterate up to, for example, five representing the maximum game length for easy mode, each round increasing in length until the max.
+
+Another issue I encountered was adding a button that dynamically updated the amount of tries the user had left before a lose condition triggered stopGame. I wanted the HTML button to show a JavaScript variable with some flavor text added, as in, “3 tries remaining”. This is crucial information to the user for any game, I thought! What I didn’t understand at first was that HTML is just a markup language, and that I needed javascript to ‘tell’ HTML what to display at what time.
+
+I ended up creating a function that updates the lives remaining on-screen each time its updated by the user, when they enter a wrong guess basically. I wired up this function to be called every time a wrong guess was detected upon button clicking during gameplay. The function itself sends some javascript variables, an integer chancesBeforeLoss and a short string of flavor text, to be displayed directly to some HTML button with a specific id, via .innerHTML. I had to research how to do this because I didn't know about it when I first started.
+
+	
 3. What questions about web development do you have after completing your submission? 
-	(recommended 100 - 300 words) 
+	(recommended 100 - 300 words)
+	
+One of the things I noticed very quickly was keeping track of all the changes to my codebase. Of course, once I implemented something new, it would affect something else if I didn’t watch my steps carefully. I can see how important version control is.
 
+My question is how do large organizations manage it all? I’m just one person and I’m still learning how to manage my own version control, so how can a group of 20, 50, or 100 people get all this collaboration done? Clearly, we don’t even need to be in the same geographic location get some group work done, so tracking who is doing what to the codebase seems to be a good solution. Github is friendly enough to use for a new person, but I can see there’s so much more going on under the hood, and I really need to spend time with it and learn its ins and outs.
+
+Next, I will admit I’m not the most stylistic person, because I’m much more interested in the nuts and bolts behind the web program. I’d like to know, then, is how some websites end up looking so attractive and even original? It must be challenging to “invent” new web style with all the tools at our disposal. Design in the real world, like in fashion, in itself is very expressive and emotional at times, so I’d love to know how web designers get it all done and express themselves in that medium. 
 
 4. If you had a few more hours to work on this project, what would you spend them doing 
 	(for example: refactoring certain functions, adding additional features, etc).
 	Be specific. (recommended 100 - 300 words) 
 
+I gave myself a time budget of about 20 hours to work on this project, some of which was not spent writing code on the Glitch platform. I was researching how to implement something in languages I’m not familiar with, and I found myself at times reading more than coding. 
 
+If I had more time, I’d implement some advanced, or quirky, features like a hint feature, a ‘JAM!’ button, or speed mode. 
+
+More exotic things could be implemented like background music you might hear in an elevator, or random facts crawl about the history of the memory game (Hasbro’s Simon Says) along the bottom of the browser, like you might see on a news network.
+
+A hint button might prompt the user after a few seconds of inactivity midway through a pattern with the next correct button. This might be fun for the easy mode. However, in difficult mode, maybe the hint feature just teases the user by displaying some distracting dialogue.
+
+A ‘JAM!’ button might randomly input a combo of two buttons, like red and blue, as just one attempt at a guess. I think this might be fun just once per game, as a last-ditch effort to try to advance the round without losing.
+
+Lastly, I like the idea of speed mode! The game is just really fast, and progresses to as many rounds as the user can guess before entering the wrong sequence guess. The game might remember the users highest score and time and display a ‘hall of fame’ type statistics display for history of best scores.
 
 
 ## Interview Recording URL Link
