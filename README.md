@@ -4,7 +4,7 @@
 
 Submitted by: IAN ALEXANDER RODRIGUEZ
 
-Time spent: 14 hours spent in total
+Time spent: 17 hours spent in total
 
 Link to project: https://almondine-pricey-conchoraptor.glitch.me/
 
@@ -106,7 +106,7 @@ Lastly, I like the idea of speed mode! The game is just really fast, and progres
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://www.loom.com/share/4ed4048860c147f396a4228815303d03)
 
 
 ## License
